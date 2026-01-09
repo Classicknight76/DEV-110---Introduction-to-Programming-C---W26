@@ -1,6 +1,6 @@
 # Week 1: Hello, GitHub - Study Notes
 
-**Name:**
+**Name: Zane Herold**
 
 ## Development Environment Setup
 
@@ -12,31 +12,31 @@ Answer:
 **Operating system:**
 [What OS are you using? Windows, macOS, or Linux?]
 
-Answer:
+Answer: Windows 11
 
 ## Challenges and Solutions
 
 **Biggest challenge during setup:**
 [What was the hardest part? Installing software, configuring VS Code, understanding the terminal, or something else?]
 
-Answer:
+Answer: The hardest part was was configueign VS code. For some reason on windows the command prompt was having some trouble.
 
 **How you solved it:**
 [Explain what you did to overcome the challenge - search online, ask for help, restart your computer, etc.]
 
-Answer:
+Answer: It turns out in the VS code main menu there is a button to clone directly from a URL and it was then done.
 
 **Most confusing concept:**
 [What was hardest to understand? Git commands, terminal navigation, C# syntax, or dotnet CLI?]
 
-Answer:
+Answer:The Git commands
 
 ## Understanding C# Basics
 
 **What does `Console.WriteLine()` do?**
 [Explain in your own words what this command does]
 
-Answer:
+Answer: It tells the computer to output what is in the parentheses into the Console.
 
 **What is the purpose of `Program.cs`?**
 [Why is this file important in a C# project?]
@@ -80,12 +80,12 @@ Answer:
 
 **Breakdown:**
 
--   Installing and configuring software: [X hours]
--   Learning terminal/command line basics: [X hours]
--   Writing the "Hello, GitHub!" program: [X hours]
--   Understanding Git workflow: [X hours]
--   Testing and fixing issues: [X hours]
--   Writing documentation: [X hours]
+- Installing and configuring software: 2
+- Learning terminal/command line basics: [X hours]
+- Writing the "Hello, GitHub!" program: [X hours]
+- Understanding Git workflow: [X hours]
+- Testing and fixing issues: [X hours]
+- Writing documentation: [X hours]
 
 **Most time-consuming part:** [Which aspect took the longest and why?]
 
