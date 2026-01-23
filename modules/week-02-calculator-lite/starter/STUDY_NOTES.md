@@ -1,18 +1,18 @@
 # Week 2: Calculator Lite - Study Notes
 
-**Name:**
+**Name:Zane Herold**
 
 ## Understanding Data Types
 
 **What are the four data types you used in this assignment?**
 [List each data type (string, bool, int, double) and explain what kind of data each one stores]
 
-Answer:
+Answer: string-used to store text based variables like name. bool-used to store true or false values. int is used for non-decimal numbers that are stored. double is used to store decimal numbers
 
 **Why did we use `double` instead of `int` for the calculations?**
 [Explain the difference between int and double, and why double is better for this calculator]
 
-Answer:
+Answer: we used double because it cna store decimals and division will usally cause that to occur and if we used int we would get an error
 
 **How do you convert a string to a boolean?**
 [Explain how you converted the user's "yes/no" input into a true/false value]
