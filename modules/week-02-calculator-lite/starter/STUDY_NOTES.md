@@ -17,75 +17,75 @@ Answer: we used double because it cna store decimals and division will usally ca
 **How do you convert a string to a boolean?**
 [Explain how you converted the user's "yes/no" input into a true/false value]
 
-Answer:
+Answer:I used an if statement to determine what was chosen then I set the variable accordingly
 
 ## Challenges and Solutions
 
 **Biggest challenge with this assignment:**
 [What was the hardest part? Understanding data types, getting user input, performing calculations, formatting output, or handling division by zero?]
 
-Answer:
+Answer: The hardest part was formating the output
 
 **How you solved it:**
 [Explain what you did to overcome the challenge - reviewed documentation, asked for help, tested different approaches, etc.]
 
-Answer:
+Answer: I looked up ways to do it online then made it work accordingly
 
 **Most confusing concept:**
 [What was hardest to understand? Parsing input, modulus operator, percentage formula, conditional formatting, or something else?]
 
-Answer:
+Answer:Parsing input is still a bit confusing
 
 ## Understanding Arithmetic Operations
 
 **What is the difference between the modulus operator (%) and division (/)?**
 [Explain what each operator does and give an example]
 
-Answer:
+Answer: the modulus operator is the same concept as division but it cuts off decimals at a certain point while division just continues to give the decimals.
 
 **How do you calculate the average of two numbers?**
 [Write the formula in your own words]
 
-Answer:
+Answer: (Num1 + Num2) / 2
 
 **What is the formula for percentage difference?**
 [Explain the formula you used: ((num1 - num2) / num1) * 100]
 
-Answer:
+Answer: The formula took the first number - the secound number to get the basic differance then divideds it by the firt number and multiplies by 100 to make it into percent differance
 
 ## Input and Output
 
 **How do you read user input in C#?**
 [Explain what Console.ReadLine() does and what type of data it returns]
 
-Answer:
+Answer: Console.ReadLine() reads the input from the user and returns it as a string data type
 
 **How do you convert string input to a number?**
 [Explain the Parse methods you used, like double.Parse()]
 
-Answer:
+Answer: you use double.Parse() to convert a string to a double data type and int.Parse() to convert a string to an int data type
 
 **What is string interpolation and how did you use it?**
 [Explain the $ symbol and curly braces {} in Console.WriteLine()]
 
-Answer:
+Answer: the $ symbol is used to indicate that the string contains interpolated expressions, and the curly braces {} are used to enclose the expressions that will be evaluated and inserted into the string
 
 ## Conditional Logic
 
 **How do you format numbers with 2 decimal places vs whole numbers?**
 [Explain the :F2 and :F0 format specifiers]
 
-Answer:
+Answer: the :F2 specifier is used to format a number to 2 decimal places while the :F0 specifier is used to format a number to a whole number with no decimal places
 
 **Why is it important to check for division by zero?**
 [Explain what happens if you try to divide by zero and how you handled it]
 
-Answer:
+Answer: because dividing by zero is undefined and will cause an error in the program so I used an if statement to check if the denominator was zero before performing the division
 
 **How did you use the boolean variable to control formatting?**
 [Explain how you used if/else to format output differently based on user preference]
 
-Answer:
+Answer: I used an if/else statement to check the value of the boolean variable and formatted the output accordingly based on whether the user wanted decimal precision or not
 
 ## What I Learned
 
@@ -126,13 +126,13 @@ Answer:
 
 **Breakdown:**
 
--   Understanding data types: [X hours]
--   Reading and parsing user input: [X hours]
--   Implementing arithmetic operations: [X hours]
--   Adding conditional formatting: [X hours]
--   Handling division by zero: [X hours]
--   Testing and debugging: [X hours]
--   Writing documentation: [X hours]
+- Understanding data types: [X hours]
+- Reading and parsing user input: [X hours]
+- Implementing arithmetic operations: [X hours]
+- Adding conditional formatting: [X hours]
+- Handling division by zero: [X hours]
+- Testing and debugging: [X hours]
+- Writing documentation: [X hours]
 
 **Most time-consuming part:** [Which aspect took the longest and why?]
 
