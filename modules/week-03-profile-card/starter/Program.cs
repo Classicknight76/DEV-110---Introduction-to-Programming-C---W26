@@ -14,6 +14,14 @@ public class Program
         // - Favorite color
         // - Dream job
         // Hint: string variableName = Console.ReadLine();
+        Console.Write("Enter your full name: ");
+        string fullName = Console.ReadLine();
+        Console.Write("Enter your hometown (city, state): ");
+        string hometown = Console.ReadLine();
+        Console.Write("Enter your favorite color: ");
+        string favoriteColor = Console.ReadLine();
+        Console.Write("Enter your dream job: ");
+        string dreamJob = Console.ReadLine();
 
         // TODO: Collect ACADEMIC INFORMATION
         // - Major (string)
@@ -22,11 +30,29 @@ public class Program
         // - Is full-time student? (bool from yes/no)
         // Hint: double gpa = double.Parse(Console.ReadLine());
         // Hint: bool isFullTime = answer.ToLower() == "yes";
+        Console.Write("Enter your major: ");
+        string major = Console.ReadLine();
+        Console.Write("Enter your GPA (0.0-4.0): ");
+        double gpa = double.Parse(Console.ReadLine());
+        Console.Write("Enter your graduation year: ");
+        int graduationYear = int.Parse(Console.ReadLine());
+        Console.Write("Are you a full-time student? (yes/no): ");
+        string answer = Console.ReadLine();
+        bool isFullTime = answer.ToLower() == "yes";
+        bool isFullTime = true:
+        else
+            bool isFullTime = false;
 
         // TODO: Collect ADDITIONAL DETAILS
         // - Age (int)
         // - Height in inches (double)
         // - Favorite number (int)
+        Console.Write("Enter your age: ");
+        int age = int.Parse(Console.ReadLine());
+        Console.Write("Enter your height in inches: ");
+        double heightInches = double.Parse(Console.ReadLine());
+        Console.Write("Enter your favorite number: ");
+        int favoriteNumber = int.Parse(Console.ReadLine());
 
         // TODO: CALCULATE derived information
         // - Birth year = 2026 - age

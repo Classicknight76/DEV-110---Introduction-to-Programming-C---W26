@@ -92,60 +92,60 @@ Answer: I used an if/else statement to check the value of the boolean variable a
 **Key takeaways from this week:**
 [What are the 3-5 most important things you learned?]
 
-1.
-2.
-3.
-4.
-5.
+1.I learned how to write boolean variables in thge name variable line and how to access the variable effectively
+2.I learned how to properly format variables to certain decimal points
+3.I learned how to format outputs to make them be visualy appealing and easy to read
+4.-
+5.-
 
 **Which data type concept was most useful?**
 [Explain which data type (string, bool, int, or double) you found most interesting and why]
 
-Answer:
+Answer: I found the double data type most useful because it allows for precise decimal calculations, which is essential for accurate arithmetic operations in a calculator.
 
 **How does conditional formatting improve user experience?**
 [Why is it helpful to let users choose decimal precision?]
 
-Answer:
+Answer: It is useful because some users may want more precise results while others may prefer simpler whole numbers.
 
 ## Testing and Debugging
 
 **What test cases did you use to verify your program works?**
 [List the different inputs you tested - positive numbers, negative numbers, decimals, zero, etc.]
 
-Answer:
+Answer: I used a simple 1,1 to just see if the overall code works than i did a 2/0 to test my zero checker
 
 **What bugs or errors did you encounter and fix?**
 [Describe any errors you got and how you fixed them]
 
-Answer:
+Answer: I encountered errors about formating variables where i forgot to specify the type (bool,int ,ect)
 
 ## Time Spent
 
-**Total time:** [X hours]
+**Total time:** [5 hours]
 
 **Breakdown:**
 
-- Understanding data types: [X hours]
-- Reading and parsing user input: [X hours]
-- Implementing arithmetic operations: [X hours]
-- Adding conditional formatting: [X hours]
-- Handling division by zero: [X hours]
-- Testing and debugging: [X hours]
-- Writing documentation: [X hours]
+- Understanding data types: [0.5 hours]
+- Reading and parsing user input: [1 hours]
+- Implementing arithmetic operations: [1 hours]
+- Adding conditional formatting: [0.5 hours]
+- Handling division by zero: [0.5 hours]
+- Testing and debugging: [0.5 hours]
+- Writing documentation: [1 hours]
 
 **Most time-consuming part:** [Which aspect took the longest and why?]
 
-Answer:
+Answer: the most time consuming was the parsing user imput because i hadto make sure i sent and retrived messages in a certain order.
 
 ## Reflection
 
 **What would you do differently next time?**
 [What would you change in your approach or code?]
 
-Answer:
+Answer: Next time I will try to condence my code since some parts used code that was unnecessarly long.
 
 **How does this assignment prepare you for more complex programs?**
 [Why are these skills important for future programming tasks?]
 
-Answer:
+Answer: Being able to handle user input, perform calculations, and format output are fundamental skills that will be essential for building more complex applications in the future.

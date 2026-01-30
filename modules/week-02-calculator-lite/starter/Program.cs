@@ -13,6 +13,7 @@ public class Program
 
         string username = "Unidentified";
         bool useDecimals = false;
+        bool NoError = true;
         double num1 = 0;
         double num2 = 0;
 
@@ -88,12 +89,23 @@ public class Program
         // Include descriptive labels for each operation
 
         Console.WriteLine("\nCalculation Results:");
-        System.Console.WriteLine("Addition: {0} + {1} = {2:F2}", num1, num2, sum.ToString());
-        System.Console.WriteLine("Subtraction: {0} - {1} = {2:F2}", num1, num2, diff.ToString());
-        System.Console.WriteLine("Multiplication: {0} * {1} = {2:F2}", num1, num2, prod.ToString());
-        System.Console.WriteLine("Division: {0} / {1} = {2:F2}", num1, num2, quot.ToString());
-        System.Console.WriteLine("Modulus: {0} % {1} = {2:F2}", num1, num2, rem.ToString());
-        System.Console.WriteLine("Average of {0} and {1} = {2:F2}", num1, num2, ave.ToString());
+        if (useDecimals == true)
+        {
+            System.Console.WriteLine("Addition: {0} + {1} = {2:F2}", num1, num2, sum.ToString());
+            System.Console.WriteLine("Subtraction: {0} - {1} = {2:F2}", num1, num2, diff.ToString());
+            System.Console.WriteLine("Multiplication: {0} * {1} = {2:F2}", num1, num2, prod.ToString());
+            System.Console.WriteLine("Division: {0} / {1} = {2:F2}", num1, num2, quot.ToString());
+            System.Console.WriteLine("Modulus: {0} % {1} = {2:F2}", num1, num2, rem.ToString());
+            System.Console.WriteLine("Average of {0} and {1} = {2:F2}", num1, num2, ave.ToString());
+        }
+        else
+        {
+            System.Console.WriteLine("Addition: {0} + {1} = {2}", num1, num2, sum.ToString("F0"));
+            System.Console.WriteLine("Subtraction: {0} - {1} = {2}", num1, num2, diff.ToString("F0"));
+            System.Console.WriteLine("Multiplication: {0} * {1} = {2}", num1, num2, prod.ToString("F0"));
+            System.Console.WriteLine("Modulus: {0} % {1} = {2}", num1, num2, rem.ToString("F0"));
+            System.Console.WriteLine("Average of {0} and {1} = {2}", num1, num2, ave.ToString("F0"));
+        }
 
         // TODO: Check if second number is zero BEFORE dividing
         // Use if statement: if (num2 == 0) { show error } else { calculate }
@@ -101,16 +113,18 @@ public class Program
         if (num2 == 0)
         {
             System.Console.WriteLine(" ERROR: Cause Division by zero.");
+            NoError = false;
         }
         else
         {
-            System.Console.WriteLine(" {0} / {1} = {2:F2}", num1, num2, quot.ToString());
+            System.Console.WriteLine("Division: {0} / {1} = {2:F2}", num1, num2, quot.ToString());
+            NoError = true;
         }
 
         // TODO: Count total calculations performed (int)
         // Display: "Performed [count] calculations for [name]!"
 
-        int calcCount = 6;
+        int calcCount = 6 + (NoError ? 1 : 0);
         System.Console.WriteLine("\nPerformed a total of {0} calculations for {1}!", calcCount, username);
 
         // TODO: Calculate percentage difference
