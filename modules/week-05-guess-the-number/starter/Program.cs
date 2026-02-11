@@ -10,7 +10,7 @@ public class Program
 
         // TODO 1: Complete the helper method named ReadIntInRange
         // Why: It avoids repeating the same input-validation code for max value and rounds.
-        ReadIntInRange("Enter a max value (10-100): ", 10, 100);
+        ReadIntInRange("Enter a max value (1-100): ", 10, 100);
         ReadIntInRange("How many rounds? (1-3): ", 1, 3);
 
         // TODO 2: Get a valid max value (10-100) using ReadIntInRange
@@ -18,6 +18,7 @@ public class Program
         // Hint: int.TryParse() and range check (value >= 10 && value <= 100)
         // Store result in an int named maxValue
         int maxValue = ReadIntInRange("Enter a max value (10-100): ", 10, 100);
+        int.TryParse(Value >= 10 && value <= 100, out maxValue);
 
 
         // TODO 3: Get a valid number of rounds (1-3) using ReadIntInRange
@@ -25,6 +26,7 @@ public class Program
         // Hint: int.TryParse() and range check (value >= 1 && value <= 3)
         // Store result in an int named rounds
         int rounds = ReadIntInRange("How many rounds? (1-3): ", 1, 3);
+        int.TryParse(Value >= 1 && value <= 3, out rounds);
 
         // TODO 4: Use a for loop to repeat the game for each round
         // Example: for (int round = 1; round <= rounds; round++)
@@ -63,7 +65,7 @@ public class Program
                 bool isValid = int.TryParse(input, out guess);
                 if (!isValid || guess < 1 || guess > maxValue)
                 {
-                    Console.WriteLine("Invalid input. Please enter a number between 1 and {maxValue}.");
+                    Console.WriteLine($"Invalid input. Please enter a number between 1 and {maxValue}.");
                     continue;
                 }
 
