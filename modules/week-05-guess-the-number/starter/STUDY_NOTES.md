@@ -12,7 +12,7 @@ Answer: They are different because a do-while loop runs the code before checking
 **Where did you use a `do-while` loop in this assignment and why?**
 [Describe the input validation use]
 
-Answer:
+Answer: The use of a do-while loop is in the input validation for the max value and rounds. This is because we want the user to be given the prompt at least once and until they enter a valid input..
 
 **Where did you use a `while` loop and why?**
 [Describe the guessing loop]
@@ -29,12 +29,12 @@ Answer: I used a for loop to repeat the game for each round. This is because we 
 **Why did you create a helper method for input validation?**
 [Explain how it avoids repeating code for max value and rounds]
 
-Answer: I created a helper method for input validation
+Answer: I created a helper method for input validation so I could reuse it instead of repeating code to verify certain inputs.
 
 **How did you make sure the max value was between 10 and 100?**
 [Explain your range check logic]
 
-Answer:
+Answer: To make sure the max value was between 10 and 100, I used a do-while loop that checks if the input is less than 10 or greater than 100. If the input is outside this range, I prompt the user to enter a valid max value until they provide a valid input.
 
 **How did you make sure the number of rounds was between 1 and 3?**
 [Explain your range check logic]
@@ -44,14 +44,14 @@ Answer: I made sure the number of rounds was between 1 and 3 by using a while lo
 **How did you handle invalid input (non-numbers)?**
 [Explain how int.TryParse works]
 
-Answer:
+Answer: I handled invalid input by using int.TryParse, which attempts to convert the input string to an integer. If the conversion fails (e.g., if the user enters a non-number), TryParse returns false, and I can prompt the user to enter a valid number again.
 
 ## Guessing Logic
 
 **How did you compare the guess to the secret number?**
 [Explain the if/else logic for too low, too high, and correct]
 
-Answer:
+Answer: To compare the guess to the secret number, I used an if/else statement. If the guess is less than the secret number, I print "Too low! Try again." If the guess is greater than the secret number, I print "Too high! Try again." If the guess is equal to the secret number, I print "Correct! You got it in X guesses."
 
 **How did you count the number of guesses?**
 [Explain where you incremented the counter]
@@ -80,22 +80,22 @@ Answer:
 **What bugs or errors did you encounter and fix?**
 [Describe any logic or loop errors]
 
-Answer:
+Answer: I encountered where the user was not prompted to enetr a vlaid number if they entered an invlaid one. I fixed this by noticign the do while i was intended to add to the bottem of the method and i had never conmpleted it.
 
 ## What I Learned
 
 **Key takeaways from this week:**
 [3-5 main things you learned]
 
-1.
-2.
-3.
+1. I learned how to apply for and while loops to make a multi-round guessing game
+2. I learned how to use helper methods and how they appear differently in C# than other languages I have used.
+3. I learned how to use the Random class to generate random numbers in a specific range in C#.
 4.
 5.
 
 **Which loop felt most natural to use and why?**
 
-Answer:
+Answer: The while loop felt the most natural because it was straight forward to use it was as this happens do this until this condition is met or lost.
 
 ## Time Spent
 
@@ -107,7 +107,7 @@ Answer:
 - Input validation: [X hours]
 - Guessing logic: [X hours]
 - Testing and debugging: [X hours]
-- Writing documentation: [X hours]
+- Writing documentation: [0.5 hours]
 
 **Most time-consuming part:** [Which aspect took the longest and why?]
 

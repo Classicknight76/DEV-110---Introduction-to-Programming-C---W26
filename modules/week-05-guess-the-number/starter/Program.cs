@@ -8,11 +8,6 @@ public class Program
     {
         Console.WriteLine("=== Guess the Number: Loop Trio ===\n");
 
-        // TODO 1: Complete the helper method named ReadIntInRange
-        // Why: It avoids repeating the same input-validation code for max value and rounds.
-        ReadIntInRange("Enter a max value (1-100): ", 10, 100);
-        ReadIntInRange("How many rounds? (1-3): ", 1, 3);
-
         // TODO 2: Get a valid max value (10-100) using ReadIntInRange
         // Prompt: "Enter a max value (10-100): "
         // Hint: int.TryParse() and range check (value >= 10 && value <= 100)
@@ -60,6 +55,7 @@ public class Program
                 // Prompt: $"Guess a number (1-{maxValue}): "
                 // Hint: int.TryParse() and continue the loop if invalid
                 // Hint: if parsing fails, skip feedback and ask again
+                //Maybe put dowhile loop where if statement is
                 Console.Write($"Guess a number (1-{maxValue}): ");
                 string input = Console.ReadLine();
                 bool isValid = int.TryParse(input, out guess);
@@ -91,12 +87,23 @@ public class Program
             Console.WriteLine("\nThanks for playing!");
         }
 
-        // private static int ReadIntInRange(string prompt, int min, int max)
-        // {
-        // Requirements:
-        // - Use a do-while loop
-        // - Use int.TryParse() for input
-        // - Repeat until the value is in range
-        // -- Hint: !isValid || value < min || value > max
-        // }
+        private static int ReadIntInRange(string prompt, int min, int max)
+    {
+        int value;
+        bool isValid;
+
+        do
+        {
+            Console.Write(prompt);
+            isValid = int.TryParse(Console.ReadLine(), out value);
+
+            if (!isValid || value < min || value > max)
+            {
+                Console.WriteLine($"Please enter a number from {min} to {max}");
+            }
+        }
+        while (!isValid || value < min || value > max);
+
+        return value;
     }
+}
