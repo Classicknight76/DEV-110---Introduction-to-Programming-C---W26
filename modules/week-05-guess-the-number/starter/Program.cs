@@ -13,7 +13,6 @@ public class Program
         // Hint: int.TryParse() and range check (value >= 10 && value <= 100)
         // Store result in an int named maxValue
         int maxValue = ReadIntInRange("Enter a max value (10-100): ", 10, 100);
-        int.TryParse(Value >= 10 && value <= 100, out maxValue);
 
 
         // TODO 3: Get a valid number of rounds (1-3) using ReadIntInRange
@@ -21,7 +20,6 @@ public class Program
         // Hint: int.TryParse() and range check (value >= 1 && value <= 3)
         // Store result in an int named rounds
         int rounds = ReadIntInRange("How many rounds? (1-3): ", 1, 3);
-        int.TryParse(Value >= 1 && value <= 3, out rounds);
 
         // TODO 4: Use a for loop to repeat the game for each round
         // Example: for (int round = 1; round <= rounds; round++)
@@ -86,8 +84,9 @@ public class Program
             // Example: "Thanks for playing!"
             Console.WriteLine("\nThanks for playing!");
         }
+    }
 
-        private static int ReadIntInRange(string prompt, int min, int max)
+    private static int ReadIntInRange(string prompt, int min, int max)
     {
         int value;
         bool isValid;

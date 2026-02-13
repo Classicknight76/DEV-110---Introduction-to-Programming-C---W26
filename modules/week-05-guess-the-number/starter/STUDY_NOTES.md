@@ -75,7 +75,7 @@ Answer: Random.Next generates a random number that is greater than or equal to t
 **What inputs did you test to confirm your loops worked correctly?**
 [List several test cases]
 
-Answer:
+Answer: I put in a max value of 20 and rounds of 2. Then after round 1, I put in a low guess and it said guess was too low, then a very high guess and it said too high, then I narrowed it down and when I got the correct one it said correct and how many guesses it took.
 
 **What bugs or errors did you encounter and fix?**
 [Describe any logic or loop errors]
@@ -90,8 +90,8 @@ Answer: I encountered where the user was not prompted to enetr a vlaid number if
 1. I learned how to apply for and while loops to make a multi-round guessing game
 2. I learned how to use helper methods and how they appear differently in C# than other languages I have used.
 3. I learned how to use the Random class to generate random numbers in a specific range in C#.
-4.
-5.
+4. -
+5. -
 
 **Which loop felt most natural to use and why?**
 
@@ -99,26 +99,26 @@ Answer: The while loop felt the most natural because it was straight forward to 
 
 ## Time Spent
 
-**Total time:** [X hours]
+**Total time:** [4.5 hours]
 
 **Breakdown:**
 
-- Planning the loops: [X hours]
-- Input validation: [X hours]
-- Guessing logic: [X hours]
-- Testing and debugging: [X hours]
+- Planning the loops: [1 hours]
+- Input validation: [0.5 hours]
+- Guessing logic: [2 hours]
+- Testing and debugging: [0.5 hours]
 - Writing documentation: [0.5 hours]
 
 **Most time-consuming part:** [Which aspect took the longest and why?]
 
-Answer:
+Answer: Settign up the guessing logic took the longest because I had to make sure all the conditions were correct and that the user was prompted correctly for each guess. I was worried that i had done soemthign wrong and only 1 round would trigger.
 
 ## Reflection
 
 **What would you do differently next time?**
 
-Answer:
+Answer: I woud like to make a helper function for setup and the forloop so then i can addapt it and maybe in the future make new modes like limited guess mode.
 
 **How did using three different loop types improve your understanding of repetition?**
 
-Answer:
+Answer: Usign the 3 loops helped me understand when to use each one and how they can be used together in a program. It also helped me see the benefits some loops show over others in certain situations.
