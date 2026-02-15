@@ -121,4 +121,4 @@ Answer: I woud like to make a helper function for setup and the forloop so then 
 
 **How did using three different loop types improve your understanding of repetition?**
 
-Answer: Usign the 3 loops helped me understand when to use each one and how they can be used together in a program. It also helped me see the benefits some loops show over others in certain situations.
+Answer: Using the 3 loops helped me understand when to use each one and how they can be used together in a program. It also helped me see the benefits some loops show over others in certain situations.
