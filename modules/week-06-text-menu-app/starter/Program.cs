@@ -102,9 +102,7 @@ public class Program
                     Console.Write("Enter last name: ");
                     string lastName = Console.ReadLine().Trim();
                     string fullName = firstName + " " + lastName;
-                    char firstInitial = firstName.Length > 0 ? char.ToUpper(firstName[0]) : '?';
-                    char lastInitial = lastName.Length > 0 ? char.ToUpper(lastName[0]) : '?';
-                    string initials = $"{firstInitial}{lastInitial}";
+                    string initials = $"{char.ToUpper(firstName[0])}{char.ToUpper(lastName[0])}";
                     string lowerFullName = fullName.ToLower();
                     Console.WriteLine($"\nName Tag: [{fullName}]");
                     Console.WriteLine($"Initials: {initials}");
@@ -146,14 +144,14 @@ public class Program
                 // - Use currency format specifier (:C2) for the total
                 case 4:
                     Console.Write("Enter item name: ");
-                    string itemName = Console.ReadLine();
+                    string itemName = Console.ReadLine().Trim();
                     double price = ReadDouble("Enter price: ");
                     int quantity = ReadIntInRange("Enter quantity (1-9): ", 1, 9);
                     double total = price * quantity;
                     Console.WriteLine("\n+-----------------------------+");
-                    Console.WriteLine(string.Format("| {0,-15} | {1,3} | {2,10} |", "ITEM", "QTY", "TOTAL"));
+                    Console.WriteLine("| {0,-15} | {1,3} | {2,10} |", "ITEM", "QTY", "TOTAL");
                     Console.WriteLine("+-----------------------------+");
-                    Console.WriteLine(string.Format("| {0,-15} | {1,3} | {2,10:C2} |", itemName, quantity, total));
+                    Console.WriteLine("| {0,-15} | {1,3} | {2,10:C2} |", itemName, quantity, total);
                     Console.WriteLine("+-----------------------------+");
                     break;
 
@@ -168,9 +166,9 @@ public class Program
                 // - Show three alignment examples (centered, left, right)
                 case 5:
                     Console.Write("Enter a title: ");
-                    string bannerTitle = Console.ReadLine();
+                    string bannerTitle = Console.ReadLine().Trim();
                     Console.Write("Enter a subtitle: ");
-                    string bannerSubtitle = Console.ReadLine();
+                    string bannerSubtitle = Console.ReadLine().Trim();
                     int bannerWidth = ReadIntInRange("Enter width (30-60): ", 30, 60);
                     string bannerBorder = new string('=', bannerWidth);
                     string centeredTitle = bannerTitle.ToUpper().PadLeft((bannerWidth + bannerTitle.Length) / 2);
@@ -194,17 +192,16 @@ public class Program
                 // Then print: "Goodbye!"
                 case 6:
                     Console.Write("Enter a closing word: ");
-                    string closingWord = Console.ReadLine();
+                    string closingWord = Console.ReadLine().Trim();
                     bool isGoodbye = closingWord.Equals("goodbye", StringComparison.OrdinalIgnoreCase);
                     string firstThree = closingWord.Length >= 3 ? closingWord.Substring(0, 3) : closingWord;
                     bool endsWithExclamation = closingWord.EndsWith("!");
                     int spaceIndex = closingWord.IndexOf(' ');
-                    Console.WriteLine($"\nEquals 'goodbye': {isGoodbye}");
-                    Console.WriteLine($"First 3 characters: {firstThree}");
+                    Console.WriteLine($"\nIs 'goodbye' : {isGoodbye}");
+                    Console.WriteLine($"First 3 characters are: {firstThree}");
                     Console.WriteLine($"Ends with '!': {endsWithExclamation}");
-                    Console.WriteLine($"Index of space: {spaceIndex}");
-                    Console.WriteLine("Goodbye!");
-
+                    Console.WriteLine($"Index of space character: {spaceIndex}");
+                    Console.WriteLine("\nGoodbye!");
                     break;
                     // TODO 6: Add a blank line between menu actions (but not after Exit)
             }
