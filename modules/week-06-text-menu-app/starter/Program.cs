@@ -102,7 +102,9 @@ public class Program
                     Console.Write("Enter last name: ");
                     string lastName = Console.ReadLine().Trim();
                     string fullName = firstName + " " + lastName;
-                    string initials = $"{char.ToUpper(firstName[0])}{char.ToUpper(lastName[0])}";
+                    char firstInitial = firstName.Length > 0 ? char.ToUpper(firstName[0]) : '?';
+                    char lastInitial = lastName.Length > 0 ? char.ToUpper(lastName[0]) : '?';
+                    string initials = $"{firstInitial}{lastInitial}";
                     string lowerFullName = fullName.ToLower();
                     Console.WriteLine($"\nName Tag: [{fullName}]");
                     Console.WriteLine($"Initials: {initials}");
@@ -149,9 +151,9 @@ public class Program
                     int quantity = ReadIntInRange("Enter quantity (1-9): ", 1, 9);
                     double total = price * quantity;
                     Console.WriteLine("\n+-----------------------------+");
-                    Console.WriteLine("| {0,-15} | {1,3} | {2,10} |", "ITEM", "QTY", "TOTAL");
+                    Console.WriteLine(string.Format("| {0,-15} | {1,3} | {2,10} |", "ITEM", "QTY", "TOTAL"));
                     Console.WriteLine("+-----------------------------+");
-                    Console.WriteLine("| {0,-15} | {1,3} | {2,10:C2} |", itemName, quantity, total);
+                    Console.WriteLine(string.Format("| {0,-15} | {1,3} | {2,10:C2} |", itemName, quantity, total));
                     Console.WriteLine("+-----------------------------+");
                     break;
 
@@ -197,38 +199,38 @@ public class Program
                     string firstThree = closingWord.Length >= 3 ? closingWord.Substring(0, 3) : closingWord;
                     bool endsWithExclamation = closingWord.EndsWith("!");
                     int spaceIndex = closingWord.IndexOf(' ');
-                    Console.WriteLine($"\nEquals 'goodbye' : {isGoodbye}");
+                    Console.WriteLine($"\nEquals 'goodbye': {isGoodbye}");
                     Console.WriteLine($"First 3 characters: {firstThree}");
                     Console.WriteLine($"Ends with '!': {endsWithExclamation}");
-                    Console.WriteLine($"Index of space character: {spaceIndex}");
-                    Console.WriteLine("\nGoodbye!");
+                    Console.WriteLine($"Index of space: {spaceIndex}");
+                    Console.WriteLine("Goodbye!");
+
                     break;
                     // TODO 6: Add a blank line between menu actions (but not after Exit)
             }
         }
     }
 
-    private static int ReadIntInRange(string prompt, int min, int max)
+    static int ReadIntInRange(string prompt, int min, int max)
     {
         // TODO 7: Implement input validation
         // Use a do-while loop with int.TryParse()
         // Keep prompting until input is valid AND within range
         // Return the valid number
+
         int value;
         bool isValid;
+
         do
         {
             Console.Write(prompt);
-            isValid = int.TryParse(Console.ReadLine(), out value) && value >= min && value <= max;
-            if (!isValid)
-            {
-                Console.WriteLine($"Please enter a valid number between {min} and {max}.");
-            }
-        }
-        while (!isValid);
+            string input = Console.ReadLine();
+            isValid = int.TryParse(input, out value);
+        } while (!isValid || value < min || value > max);
+
         return value;
     }
-    private static double ReadDouble(string prompt)
+    static double ReadDouble(string prompt)
     {
         // TODO 8: Implement input validation
         // Use a do-while loop with double.TryParse()
@@ -240,14 +242,10 @@ public class Program
         do
         {
             Console.Write(prompt);
-            isValid = double.TryParse(Console.ReadLine(), out value);
+            string input = Console.ReadLine();
+            isValid = double.TryParse(input, out value);
+        } while (!isValid);
 
-            if (!isValid)
-            {
-                Console.WriteLine("Please enter a valid number.");
-            }
-        }
-        while (!isValid);
         return value;
     }
 }
