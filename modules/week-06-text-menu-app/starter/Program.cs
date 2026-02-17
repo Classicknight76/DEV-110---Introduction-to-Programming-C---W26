@@ -83,7 +83,6 @@ public class Program
                     Console.WriteLine("+----------------------+");
                     break;
 
-
                 // ===== OPTION 2: Name Tag Formatter =====
                 // Prompts: "Enter first name: " and "Enter last name: "
                 // Required string operations:
@@ -203,18 +202,18 @@ public class Program
                     Console.WriteLine($"Index of space character: {spaceIndex}");
                     Console.WriteLine("\nGoodbye!");
                     break;
+
                     // TODO 6: Add a blank line between menu actions (but not after Exit)
             }
         }
     }
 
-    static int ReadIntInRange(string prompt, int min, int max)
+    private static int ReadIntInRange(string prompt, int min, int max)
     {
         // TODO 7: Implement input validation
         // Use a do-while loop with int.TryParse()
         // Keep prompting until input is valid AND within range
         // Return the valid number
-
         int value;
         bool isValid;
 
@@ -223,11 +222,13 @@ public class Program
             Console.Write(prompt);
             string input = Console.ReadLine();
             isValid = int.TryParse(input, out value);
-        } while (!isValid || value < min || value > max);
+        }
+        while (!isValid || value < min || value > max);
 
         return value;
     }
-    static double ReadDouble(string prompt)
+
+    private static double ReadDouble(string prompt)
     {
         // TODO 8: Implement input validation
         // Use a do-while loop with double.TryParse()
@@ -241,7 +242,8 @@ public class Program
             Console.Write(prompt);
             string input = Console.ReadLine();
             isValid = double.TryParse(input, out value);
-        } while (!isValid);
+        }
+        while (!isValid);
 
         return value;
     }
