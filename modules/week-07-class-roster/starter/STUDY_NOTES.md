@@ -1,6 +1,6 @@
 # Week 7: Class Roster Builder (Arrays) - Study Notes
 
-**Name:**
+**Name:Zane Herold**
 
 ## Arrays and `count`
 
@@ -12,7 +12,7 @@ Answer:
 **What is the purpose of the `count` variable?**
 [Explain how it tracks how many roster slots are “in use”]
 
-Answer:
+Answer: The purpose of the count variable is to keep track of how many students have been added to the roster. It tells us how many slots in the parallel arrays are currently being used to store student information. When we add a student, we store their name and credits at the index specified by count, and then we increment count. This way, count always reflects the number of students in the roster, and we can use it to loop through only the occupied array.
 
 **Where did you use `count` in loops and why?**
 [Explain why you loop 0..count-1 instead of using the full array length]
