@@ -45,25 +45,26 @@ public class Program
         // - Height in inches (double)
         // - Favorite number (int)
         Console.Write("Enter your age: ");
-        int Age = int.Parse(Console.ReadLine());
+        int age = int.Parse(Console.ReadLine());
         Console.Write("Enter your height in inches: ");
         double heightInches = double.Parse(Console.ReadLine());
         Console.Write("Enter your favorite number: ");
         int favoriteNumber = int.Parse(Console.ReadLine());
         Console.Write($"Favorite Number: {favoriteNumber}");
-        Console.Write($"Age: {Age}");
+        Console.Write($"Age: {age}");
+
         // TODO: CALCULATE derived information
         // - Birth year = 2026 - age
         // - Years to graduation = graduationYear - 2026
         // - Height in feet and inches: feet = heightInches / 12, inches = heightInches % 12
         // - Is honor student? = gpa >= 3.5
         // - Age in months = age * 12
-        int birthYear = 2026 - Age;
+        int birthYear = 2026 - age;
         int yearsToGraduation = graduationYear - 2026;
         int heightFeet = (int)(heightInches / 12);
         int heightRemainingInches = (int)(heightInches % 12);
         bool isHonorStudent = gpa >= 3.5;
-        int ageInMonths = Age * 12;
+        int ageInMonths = age * 12;
 
         // TODO: DISPLAY formatted profile card
         // Use sections with headers:
@@ -77,7 +78,7 @@ public class Program
         Console.WriteLine($"Favorite Color: {favoriteColor}");
         Console.WriteLine($"Dream Job: {dreamJob}");
         Console.WriteLine($"Favorite Number: {favoriteNumber}");
-        Console.WriteLine($"Age: {Age}");
+        Console.WriteLine($"Age: {age}");
         Console.WriteLine("\n════════════════ ACADEMIC DETAILS ════════════════");
         Console.WriteLine($"Major: {major}");
         Console.WriteLine($"GPA: {gpa:F2}");
