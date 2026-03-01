@@ -81,8 +81,17 @@ Desktop.ini
 .vscode/tasks.json.local
 
 # GitHub files
-.github
-.github/copilot-instructions.md
+.github/instructions
+.github/CODEOWNERS
+.github/PULL_REQUEST_TEMPLATE.md
 
 # Sensitive files
 **/solution/
+
+# Exception: Allow only Program.cs and .csproj files in labs solution folders
+!labs/**/solution/
+labs/**/solution/**
+!labs/**/solution/Program.cs
+!labs/**/solution/*.csproj
+!labs/**/solution/Movie.cs
+
