@@ -3,7 +3,7 @@
 - Instructor: Zak Brinlee
 - Term: Winter 2026
 -
-- Programmer: YourName
+- Programmer: Zane Herold
 - Assignment: Week 9: Score Stats (Methods + LINQ)
 -
 - What does this program do?:
@@ -93,7 +93,7 @@ internal class ScoreReport
     // - Print exactly: Sorted (asc): 10, 20, 30
     private void PrintScoresSorted()
     {
-        var sorted = _scores.OrderBy(score => score);
+        IOrderedEnumerable<int> sorted = _scores.OrderBy(score => score);
         Console.WriteLine($"Sorted (asc): {string.Join(", ", sorted)}");
     }
 
@@ -104,7 +104,7 @@ internal class ScoreReport
     // - Print exactly: Top X: 30, 20, 10
     private void PrintTopScores(int topCount)
     {
-        var top = _scores.OrderByDescending(score => score).Take(topCount);
+        IEnumerable<int> top = _scores.OrderByDescending(score => score).Take(topCount);
         Console.WriteLine($"Top {topCount}: {string.Join(", ", top)}");
     }
 
@@ -115,7 +115,7 @@ internal class ScoreReport
     // - Print exactly: Passing scores (desc): 30, 20
     private void PrintPassingScores()
     {
-        var passingScores = _scores.Where(score => score >= Threshold).OrderByDescending(score => score);
+        IOrderedEnumerable<int> passingScores = _scores.Where(score => score >= Threshold).OrderByDescending(score => score);
         Console.WriteLine($"Passing scores (desc): {string.Join(", ", passingScores)}");
     }
 
@@ -126,7 +126,7 @@ internal class ScoreReport
     // - Print exactly: Failing scores (desc): 10
     private void PrintFailingScores()
     {
-        var failingScores = _scores.Where(score => score < Threshold).OrderByDescending(score => score);
+        IOrderedEnumerable<int> failingScores = _scores.Where(score => score < Threshold).OrderByDescending(score => score);
         Console.WriteLine($"Failing scores (desc): {string.Join(", ", failingScores)}");
     }
 }
