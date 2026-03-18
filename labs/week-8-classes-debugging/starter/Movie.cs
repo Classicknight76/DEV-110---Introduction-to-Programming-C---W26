@@ -27,21 +27,35 @@ public class Movie
     // - Rating (double) - scale from 0.0 to 5.0
     // - Director (string)
     // Hint: Use auto-properties - public string Title { get; set; }
+    public string Title { get; set; }
+
+    public int Year { get; set; }
+
+    public string Genre { get; set; }
+
+    public double Rating { get; set; }
+
+    public string Director { get; set; }
 
     /// <summary>
+    /// Initializes a new instance of the <see cref="Movie"/> class.
     /// Creates a new Movie with the given details.
     /// </summary>
-    /// <param name="title">The movie title</param>
-    /// <param name="year">The release year</param>
-    /// <param name="genre">The movie genre</param>
-    /// <param name="rating">Rating from 0.0 to 5.0</param>
-    /// <param name="director">The director's name</param>
+    /// <param name="title">The movie title.</param>
+    /// <param name="year">The release year.</param>
+    /// <param name="genre">The movie genre.</param>
+    /// <param name="rating">Rating from 0.0 to 5.0.</param>
+    /// <param name="director">The director's name.</param>
     public Movie(string title, int year, string genre, double rating, string director)
     {
         // TODO 2: Assign the parameters to the properties
         // Inside the constructor, set each property to its matching parameter.
         // Example: Title = title;
-        throw new NotImplementedException();
+        Title = title;
+        Year = year;
+        Genre = genre;
+        Rating = rating;
+        Director = director;
     }
 
     /// <summary>
@@ -58,7 +72,12 @@ public class Movie
         // - Rating (use the GetStarDisplay helper method)
         // Use Console.WriteLine and string interpolation
         // Example first line: Console.WriteLine("╔════════════════════════════════════════╗");
-        throw new NotImplementedException();
+        Console.WriteLine("╔════════════════════════════════════════╗");
+        Console.WriteLine($"║ {Title} ({Year})".PadRight(40) + "║");
+        Console.WriteLine($"║ Directed by: {Director}".PadRight(40) + "║");
+        Console.WriteLine($"║ Genre: {Genre}".PadRight(40) + "║ ");
+        Console.WriteLine($"║ Rating: {GetStarDisplay()} ({Rating:0.0})".PadRight(40) + "║");
+        Console.WriteLine("╚════════════════════════════════════════╝");
     }
 
     /// <summary>
@@ -66,7 +85,7 @@ public class Movie
     /// This is a PRIVATE method - it can only be called from within this class.
     /// Private methods are helpers that organize the code but shouldn't be accessed externally.
     /// </summary>
-    /// <returns>A string of filled and empty stars</returns>
+    /// <returns>A string of filled and empty stars.</returns>
     private string GetStarDisplay()
     {
         // TODO 4: Convert rating to star display
@@ -75,14 +94,16 @@ public class Movie
         // 2. Calculate empty stars: int emptyStars = 5 - filledStars;
         // 3. Build the star string: new string('★', filledStars) + new string('☆', emptyStars)
         // 4. Return the star string
-        throw new NotImplementedException();
+        int filledStars = (int)Math.Round(Rating);
+        int emptyStars = 5 - filledStars;
+        return new string('★', filledStars) + new string('☆', emptyStars);
     }
 
     /// <summary>
     /// Updates the movie's rating with validation.
     /// This is a PUBLIC method that uses input validation.
     /// </summary>
-    /// <param name="newRating">The new rating value (0.0 to 5.0)</param>
+    /// <param name="newRating">The new rating value (0.0 to 5.0).</param>
     public void UpdateRating(double newRating)
     {
         // TODO 5: Update the rating with validation
@@ -92,6 +113,14 @@ public class Movie
         // 3. Store the current rating in a variable: double oldRating = Rating;
         // 4. Update the Rating property: Rating = newRating;
         // 5. Log the change: Logger.Info($"Rating updated from {oldRating:0.0} to {Rating:0.0}");
-        throw new NotImplementedException();
+        if (newRating < 0.0 || newRating > 5.0)
+        {
+            Logger.Warn("Rating must be between 0.0 and 5.0!");
+            return;
+        }
+
+        double oldRating = Rating;
+        Rating = newRating;
+        Logger.Info($"Rating updated from {oldRating:0.0} to {Rating:0.0}");
     }
 }
